@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="RealState.Data/RealState.Data.csproj" />
+  <Project Path="RealState.Service/RealState.Service.csproj" />
+  <Project Path="RealStateManagementSystem/RealStateManagementSystem.csproj" />
+</Solution>
