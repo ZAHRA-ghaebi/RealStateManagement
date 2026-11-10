@@ -144,7 +144,7 @@ partial class frmRegister
         // txtphonenumber
         // 
         txtphonenumber.BorderColor = Color.FromArgb(64, 64, 64);
-        txtphonenumber.BorderRadius = 13;
+        txtphonenumber.BorderRadius = 20;
         txtphonenumber.CustomizableEdges = customizableEdges7;
         txtphonenumber.DefaultText = "";
         txtphonenumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -167,7 +167,7 @@ partial class frmRegister
         // txtcode
         // 
         txtcode.BorderColor = Color.FromArgb(64, 64, 64);
-        txtcode.BorderRadius = 13;
+        txtcode.BorderRadius = 20;
         txtcode.CustomizableEdges = customizableEdges9;
         txtcode.DefaultText = "";
         txtcode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -314,7 +314,7 @@ partial class frmRegister
         // txtpassword
         // 
         txtpassword.BorderColor = Color.FromArgb(64, 64, 64);
-        txtpassword.BorderRadius = 13;
+        txtpassword.BorderRadius = 20;
         txtpassword.CustomizableEdges = customizableEdges17;
         txtpassword.DefaultText = "";
         txtpassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -337,7 +337,7 @@ partial class frmRegister
         // txtusername
         // 
         txtusername.BorderColor = Color.FromArgb(64, 64, 64);
-        txtusername.BorderRadius = 13;
+        txtusername.BorderRadius = 20;
         txtusername.CustomizableEdges = customizableEdges19;
         txtusername.DefaultText = "";
         txtusername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -380,7 +380,7 @@ partial class frmRegister
         // txtlastname
         // 
         txtlastname.BorderColor = Color.FromArgb(64, 64, 64);
-        txtlastname.BorderRadius = 13;
+        txtlastname.BorderRadius = 20;
         txtlastname.CustomizableEdges = customizableEdges21;
         txtlastname.DefaultText = "";
         txtlastname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -403,7 +403,7 @@ partial class frmRegister
         // txtfirstname
         // 
         txtfirstname.BorderColor = Color.FromArgb(64, 64, 64);
-        txtfirstname.BorderRadius = 13;
+        txtfirstname.BorderRadius = 20;
         txtfirstname.CustomizableEdges = customizableEdges23;
         txtfirstname.DefaultText = "";
         txtfirstname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);

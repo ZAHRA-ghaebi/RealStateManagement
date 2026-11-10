@@ -13,30 +13,13 @@ namespace RealStateManagementSystem;
 
 public partial class FrmLogin : Form
 {
-    
+
     public FrmLogin()
     {
         InitializeComponent();
     }
 
-    private void guna2GradientButton1_Click(object sender, EventArgs e)
-    {
-        var dbContextFactor = MyDbContextFactory.Create();
-        var result = dbContextFactor.Users.FirstOrDefault
-            (x => x.UserName == txtusername.Text && x.Password ==txtpassword.Text);
-        if(result!=null)
-        {
-            var frmDashboard = new frmDashboard(result.Id);
-            frmDashboard.Show();
-            this.Hide();
-            frmDashboard.FormClosing += FrmDashboard_FormClosing;
-        }
-        else
-            MessageBox.Show("کاربر وجود ندارد ");
 
-
-
-    }
 
     private void FrmDashboard_FormClosing(object? sender, FormClosingEventArgs e)
     {
@@ -56,18 +39,20 @@ public partial class FrmLogin : Form
         this.Show();
     }
 
-    private void checkboxRememberMe_CheckedChanged(object sender, EventArgs e)
+    private void btnEnter_Click(object sender, EventArgs e)
     {
-        var confing = 
-            ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-        confing.AppSettings.Settings["showLogin"].Value=
-            checkboxRememberMe.Checked.ToString();
-        confing.Save(ConfigurationSaveMode.Modified);
-        ConfigurationManager.RefreshSection("appSettings");
-    }
-
-    private void FrmLogin_Load(object sender, EventArgs e)
-    {
-        checkboxRememberMe.Checked = bool.Parse(ConfigurationManager.AppSettings["showLogin"]);
+        Properties.Settings.Default.ShowLogin = checkboxRememberMe.Checked;
+        Properties.Settings.Default.Save();
+        var userLog = new UserLogin();
+        var result = userLog.FindUser(txtusername.Text, txtpassword.Text);
+        if (result != null)
+        {
+            var frmDashboard = new frmDashboard(result.Id);
+            frmDashboard.Show();
+            this.Hide();
+            frmDashboard.FormClosing += FrmDashboard_FormClosing;
+        }
+        else
+            MessageBox.Show("کاربر وجود ندارد ");
     }
 }

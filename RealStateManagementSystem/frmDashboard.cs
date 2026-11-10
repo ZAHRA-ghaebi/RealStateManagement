@@ -1,4 +1,5 @@
-﻿using RealState.Data;
+﻿using Microsoft.VisualBasic;
+using RealState.Data;
 using RealState.Service;
 using System;
 using System.Collections.Generic;
@@ -62,12 +63,17 @@ public partial class frmDashboard : Form
 
     private void frmDashboard_Load(object sender, EventArgs e)
     {
-        var a = MyDbContextFactory.Create();
-        var b = a.Users.FirstOrDefault(x => x.Id == _Id);
-        if (b != null)
+        var dbContext = MyDbContextFactory.Create();
+        var findUser = dbContext.Users.FirstOrDefault(x => x.Id == _Id);
+        if (findUser != null)
         {
-            tslFullName.Text = b.FirstName;
-            tslLoginTime.Text = b.RegistDate.ToString();
+            tslFullName.Text = findUser.FirstName;
+            tslLoginTime.Text = DateTime.Now.ToString() ;
+            Properties.Settings.Default.FullName = tslFullName.Text;
+            Properties.Settings.Default.datetime= DateTime.Now;
+            Properties.Settings.Default.Save();
         }
+        tslFullName.Text=Properties.Settings.Default.FullName;
+        tslLoginTime.Text=Properties.Settings.Default.datetime.ToString();
     }
 }

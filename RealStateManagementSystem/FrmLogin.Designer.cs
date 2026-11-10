@@ -59,7 +59,7 @@ partial class FrmLogin
         btnRegister = new Guna.UI2.WinForms.Guna2GradientButton();
         btnforgetpassword = new Guna.UI2.WinForms.Guna2GradientButton();
         checkboxRememberMe = new Guna.UI2.WinForms.Guna2CheckBox();
-        guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+        btnEnter = new Guna.UI2.WinForms.Guna2GradientButton();
         lblindormation = new Label();
         lblwelcom = new Label();
         lblpassword = new Label();
@@ -132,7 +132,7 @@ partial class FrmLogin
         guna2Panel1.Controls.Add(btnRegister);
         guna2Panel1.Controls.Add(btnforgetpassword);
         guna2Panel1.Controls.Add(checkboxRememberMe);
-        guna2Panel1.Controls.Add(guna2GradientButton1);
+        guna2Panel1.Controls.Add(btnEnter);
         guna2Panel1.Controls.Add(lblindormation);
         guna2Panel1.Controls.Add(lblwelcom);
         guna2Panel1.Controls.Add(lblpassword);
@@ -210,28 +210,27 @@ partial class FrmLogin
         checkboxRememberMe.UncheckedState.BorderThickness = 0;
         checkboxRememberMe.UncheckedState.FillColor = Color.White;
         checkboxRememberMe.UseVisualStyleBackColor = false;
-        checkboxRememberMe.CheckedChanged += checkboxRememberMe_CheckedChanged;
         // 
-        // guna2GradientButton1
+        // btnEnter
         // 
-        guna2GradientButton1.BorderRadius = 100;
-        guna2GradientButton1.CustomizableEdges = customizableEdges12;
-        guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray;
-        guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray;
-        guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-        guna2GradientButton1.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-        guna2GradientButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-        guna2GradientButton1.FillColor = Color.FromArgb(255, 128, 0);
-        guna2GradientButton1.FillColor2 = Color.FromArgb(64, 64, 64);
-        guna2GradientButton1.Font = new Font("Microsoft Uighur", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-        guna2GradientButton1.ForeColor = Color.White;
-        guna2GradientButton1.Location = new Point(109, 394);
-        guna2GradientButton1.Name = "guna2GradientButton1";
-        guna2GradientButton1.ShadowDecoration.CustomizableEdges = customizableEdges13;
-        guna2GradientButton1.Size = new Size(164, 44);
-        guna2GradientButton1.TabIndex = 8;
-        guna2GradientButton1.Text = "ورود";
-        guna2GradientButton1.Click += guna2GradientButton1_Click;
+        btnEnter.BorderRadius = 100;
+        btnEnter.CustomizableEdges = customizableEdges12;
+        btnEnter.DisabledState.BorderColor = Color.DarkGray;
+        btnEnter.DisabledState.CustomBorderColor = Color.DarkGray;
+        btnEnter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+        btnEnter.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+        btnEnter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+        btnEnter.FillColor = Color.FromArgb(255, 128, 0);
+        btnEnter.FillColor2 = Color.FromArgb(64, 64, 64);
+        btnEnter.Font = new Font("Microsoft Uighur", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+        btnEnter.ForeColor = Color.White;
+        btnEnter.Location = new Point(109, 394);
+        btnEnter.Name = "btnEnter";
+        btnEnter.ShadowDecoration.CustomizableEdges = customizableEdges13;
+        btnEnter.Size = new Size(164, 44);
+        btnEnter.TabIndex = 8;
+        btnEnter.Text = "ورود";
+        btnEnter.Click += btnEnter_Click;
         // 
         // lblindormation
         // 
@@ -377,7 +376,6 @@ partial class FrmLogin
         FormBorderStyle = FormBorderStyle.None;
         Name = "FrmLogin";
         Text = "FrmLogin";
-        Load += FrmLogin_Load;
         ((System.ComponentModel.ISupportInitialize)picturebLogin).EndInit();
         guna2Panel1.ResumeLayout(false);
         guna2Panel1.PerformLayout();
@@ -402,7 +400,7 @@ partial class FrmLogin
     private Label lblindormation;
     private Label lblwelcom;
     private Label lblrealstate;
-    private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+    private Guna.UI2.WinForms.Guna2GradientButton btnEnter;
     private Guna.UI2.WinForms.Guna2CheckBox checkboxRememberMe;
     private Guna.UI2.WinForms.Guna2GradientButton btnforgetpassword;
     private Guna.UI2.WinForms.Guna2GradientButton btnRegister;
